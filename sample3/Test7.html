@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamentals Part 1</title>
+</head>
+<body>
+  <script>
+     //--------------------------------- Excercise 1  -----------------------------------------
+
+     // Start a new Git repo for your project.
+
+     // --------------------------------- Excerise 2  ------------------------------------------
+
+     // Create a blank HTML document with a script tag (Hint: it is best practice to link an external .js file). This game is going to be played completely from the console, so don’t worry about putting anything else in there.
+
+     // --------------------------------- Excercise 3  -------------------------------------------------
+
+     // Your game is going to play against the computer, so begin with a function called getComputerChoice that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’. We’ll use this function in the game to make the computer’s play. Tip: use the console to make sure this is returning the expected output before moving to the next step!
+
+        // User Selection
+        let userInput = prompt('Rock, Paper, or Scissors ?', 'insert your choice here...');
+        userInput = userInput.toLowerCase();
+
+            const getComputerChoice = () => {
+                let getNbr = Math.floor(Math.random()*2);
+                if (getNbr === 0) {
+                    return 'rock';
+                } else if (getNbr === 1) {
+                    return 'paper';
+                } else {
+                    return 'scissors';
+                }
+            };
+
+        // Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - the playerSelection and computerSelection - and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
+
+        const determineWinner = (userChoice, computerChoice) => {
+            if (userChoice === computerChoice) {
+                return 'TIE here !';
+            }
+            if (userChoice === 'rock') {
+                if (computerChoice === 'paper') {
+                return 'COMPUTER WON !';
+                } else {
+                return 'USER WON !';
+                }
+            }
+            if (userChoice === 'paper') {
+                if (computerChoice === 'scissors') {
+                return 'COMPUTER WON !';
+                } else {
+                return 'USER WON !';
+                }
+            }
+            if (userChoice === 'scissors') {
+                if (computerChoice === 'rock') {
+                return 'COMPUTER WON !';
+                } else {
+                return 'USER WON';
+                }
+            }
+        };
+
+            const playGame = () => {
+            for (let i = 0; i < 5; i++) {
+            const userChoice = userInput;
+            const computerChoice = getComputerChoice();
+                console.log(`userChoice: ${userChoice} VS. computerChoice: ${computerChoice}`);
+                console.log(determineWinner(userChoice, computerChoice));  
+                }
+            };
+
+            playGame();
+
+            function game() {
+                //Play game 5 times
+                for (let i = 0; i < 5; i++) {
+                    const playerSelection = userInput;
+                    const computerSelection = getComputerChoice();
+                    // Call playRound function, passing in newly returned values
+                    // from the playerPlay and computerPlay functions
+                    const currentRound = playRound(playerSelection, computerSelection);
+                    // Log our result
+                    console.log(currentRound);
+            }
+
+            game();
+        }
+   
+  </script>
+
+ 
+
+</body>
+</html>
