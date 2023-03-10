@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamentals Part 1</title>
+</head>
+<body>
+  <script>
+    // Excercise 1
+
+    function troubleshooting() {
+	const a = 1;
+	const b = 1;
+
+	let result;
+	result = a + b;
+    console.log('Exercise 1 result:', result);
+    }
+    troubleshooting();
+
+    //Excercise 2 
+    number = Number(prompt("enter a number"));
+
+    // Part 1
+
+        function numberChecker() {
+            if (number >= 10) {
+                return true;
+            } 
+            else if (number < 10) {
+                return false;
+            }
+
+        }
+        numberChecker();
+
+    // Part 2
+
+        function numberChecker2() {
+            if(number >= 10) {
+                return true;
+            } 
+            else {
+                return false;
+            }
+        }
+        numberChecker2();
+
+    // Exercise 3
+    const a = 1 + 8;
+    const b = 22 * 3;
+    const c = 5 % 4;
+    const d = a - 17;
+    const e = a + b + c + d;
+
+    module.exports = {a, b, c, d, e}
+
+    // Exercise 4
+
+    // Test 1
+
+    const birthYear = 1948;
+    const thisYear = 1965;
+    const firstName = "Carlos";
+    const lastName = "Stevenson";
+    const fullName = firstName + " " + lastName
+    const age = thisYear - birthYear
+
+    const greeting = "Hello! My name is " + fullName + " and I am " + (age) + " years old.";
+
+    console.log(greeting);
+
+    module.exports = {
+        testGroup: "a",
+        greeting,
+        birthYear,
+        thisYear,
+        firstName,
+        lastName
+    }
+
+    // Test 2
+
+    let firstName = "Carlos";
+    let lastName = "Stevenson";
+    let currentYear = 1965;
+    let birthYear = 1948;
+    let greeting = Hello, My name is ${firstName} ${lastName} and I am ${ currentYear - birthYear } years old.;
+
+    console.log(greeting);
+
+    let fullName = ${firstName} ${lastName};
+    let age = currentYear - birthYear;
+
+    greeting = Hello, My name is ${fullName} and I am ${age} years old.;
+
+    console.log(greeting);
+
+  </script>
+
+  <h2 style="text-align: center;">We are working on the javascript course, so run your developper tool to see the result</h2>
+</body>
+</html>

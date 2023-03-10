@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fundamentals Part 1</title>
+</head>
+<body>
+  <script>
+
+    // ----------Exercise 1 ------------
+
+    // Write a function called add7 that takes one number and returns that number + 7.
+    //Aproach 1
+
+    function add7(number) {
+        number = number + 7;
+        console.log(number);
+    }
+
+    add7(3);
+
+
+    //----------------- Exercise 2 ------------------
+    
+    //Write a function called multiply that takes 2 numbers and returns their product.
+
+    function MULTIPLY(a, b) {
+        product = a*b;
+        console.log(product);
+    }
+
+    MULTIPLY(1,2);
+
+
+    // ---------------------- Exercise 3 ----------------------------------
+
+    // Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+    // Approach 1
+
+    function capitalize(){
+			let string = "Hello Lucas How are you";
+			let newString = string.toUpperCase()[0];
+			return newString;
+		}
+		
+		console.log(capitalize());
+
+    // Approach 2
+
+    function capitalized(){
+        let writeText = prompt("Hello Jordan How are you");
+        let firstLetter = writeText.charAt(0).toUpperCase();
+        let TheRest = writeText.slice(1).toLowerCase();
+        let allThem = firstLetter + TheRest;
+            return allThem;
+    };
+        console.log(capitalized());
+
+
+    // ----------------- Exercise 4 ------------------------------------------------------
+
+    // Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d"
+
+
+
+     function lastLetter() {
+       let myWord = prompt('Enter a word. The last letter will be returned.');
+       let letter = myWord.slice(-1);
+       //console.log(letter);
+       return letter;
+     }
+
+     console.log(lastLetter());
+
+  </script>
+
+  <h2 style="text-align: center;">We are working on the javascript course, so run your developper tool to see the result</h2>
+</body>
+</html>
